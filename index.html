@@ -1,19 +1,18 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <title>Clicker Pro</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>Clicker Pro</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1 class="title">🔥 Clicker Pro</h1>
+<nav>
+    <a href="index.html">🏠 Игра</a>
+    <a href="tasks.html">🎯 Задания</a>
+</nav>
 
-<div class="card">
-    <input id="username" placeholder="Имя">
-    <button onclick="saveProfile()">Сохранить</button>
-    <h2 id="nameDisplay"></h2>
-</div>
+<h1>🔥 Clicker Pro</h1>
 
 <div class="card">
     <h2>💰 <span id="score">0</span></h2>
@@ -22,20 +21,12 @@
 
 <div class="card">
     <h3>🛒 Улучшения</h3>
-    <button onclick="buyUpgrade()">+1 к клику (<span id="upgradeCost">10</span>)</button>
-    <button onclick="buyAuto()">Авто-клик (<span id="autoCost">50</span>)</button>
+    <button onclick="buyUpgrade()">+1 (<span id="upgradeCost">10</span>)</button>
 </div>
 
 <div class="card">
-    <h3>🎨 Скины</h3>
-    <button onclick="setSkin('red')">Красный</button>
-    <button onclick="setSkin('blue')">Синий</button>
-    <button onclick="setSkin('green')">Зелёный</button>
-</div>
-
-<div class="card">
-    <h3>🏆 Топ</h3>
-    <ul id="leaderboard"></ul>
+    <h3>⏰ Ивент</h3>
+    <p id="eventText">Нет активного ивента</p>
 </div>
 
 <script src="script.js"></script>
