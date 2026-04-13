@@ -1,74 +1,45 @@
 body {
     font-family: Arial;
-    text-align: center;
-    background: linear-gradient(135deg, #1a1a1a, #000);
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     color: white;
-    overflow-x: hidden;
+    text-align: center;
 }
 
-.title {
-    animation: fadeIn 1s ease;
+nav {
+    background: rgba(0,0,0,0.5);
+    padding: 10px;
+}
+
+nav a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .card {
-    background: #222;
+    background: rgba(255,255,255,0.1);
     margin: 15px auto;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     width: 300px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.5);
-    animation: fadeInUp 0.5s ease;
+    backdrop-filter: blur(10px);
 }
 
 button {
-    padding: 10px;
-    margin: 5px;
+    padding: 12px;
     border: none;
     border-radius: 10px;
-    background: #444;
-    color: white;
+    background: gold;
     cursor: pointer;
     transition: 0.2s;
 }
 
 button:hover {
     transform: scale(1.1);
-    background: #666;
 }
 
 #clickBtn {
     font-size: 24px;
-    padding: 25px;
-    background: gold;
-    color: black;
+    padding: 30px;
 }
-
-#clickBtn:active {
-    transform: scale(0.9);
-}
-
-/* Летающие числа */
-.float {
-    position: absolute;
-    font-weight: bold;
-    animation: floatUp 1s forwards;
-}
-
-@keyframes floatUp {
-    0% { opacity: 1; transform: translateY(0); }
-    100% { opacity: 0; transform: translateY(-80px); }
-}
-
-@keyframes fadeIn {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-@keyframes fadeInUp {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-}
-
-.red { background: darkred; }
-.blue { background: darkblue; }
-.green { background: darkgreen; }
