@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Clicker Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="title">🔥 Clicker Pro</h1>
+
+<div class="card">
+    <input id="username" placeholder="Имя">
+    <button onclick="saveProfile()">Сохранить</button>
+    <h2 id="nameDisplay"></h2>
+</div>
+
+<div class="card">
+    <h2>💰 <span id="score">0</span></h2>
+    <button id="clickBtn" onclick="clickCoin(event)">КЛИК</button>
+</div>
+
+<div class="card">
+    <h3>🛒 Улучшения</h3>
+    <button onclick="buyUpgrade()">+1 к клику (<span id="upgradeCost">10</span>)</button>
+    <button onclick="buyAuto()">Авто-клик (<span id="autoCost">50</span>)</button>
+</div>
+
+<div class="card">
+    <h3>🎨 Скины</h3>
+    <button onclick="setSkin('red')">Красный</button>
+    <button onclick="setSkin('blue')">Синий</button>
+    <button onclick="setSkin('green')">Зелёный</button>
+</div>
+
+<div class="card">
+    <h3>🏆 Топ</h3>
+    <ul id="leaderboard"></ul>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
