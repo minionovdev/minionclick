@@ -10,9 +10,16 @@
 <nav>
     <a href="index.html">🏠 Игра</a>
     <a href="tasks.html">🎯 Задания</a>
+    <a href="leaderboard.html">🏆 Топ</a>
 </nav>
 
 <h1>🔥 Clicker Pro</h1>
+
+<div class="card">
+    <input id="username" placeholder="Имя">
+    <button onclick="setName()">OK</button>
+    <h3 id="playerName"></h3>
+</div>
 
 <div class="card">
     <h2>💰 <span id="score">0</span></h2>
@@ -26,7 +33,7 @@
 
 <div class="card">
     <h3>⏰ Ивент</h3>
-    <p id="eventText">Нет активного ивента</p>
+    <p id="eventText">Загрузка...</p>
 </div>
 
 <script src="script.js"></script>
