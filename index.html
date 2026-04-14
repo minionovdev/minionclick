@@ -4,10 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clicker Pro</title>
+
 <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
 
+<!-- 🔝 МЕНЮ -->
 <nav class="nav">
     <a href="index.html">🏠</a>
     <a href="tasks.html">🎯</a>
@@ -15,37 +18,54 @@
     <a href="profile.html">👤</a>
 </nav>
 
+<!-- 🔥 ЛОГО -->
 <h1 class="logo">💰 CLICKER PRO</h1>
 
+<!-- 👤 ПРОФИЛЬ -->
 <div class="card">
-    <input id="username" placeholder="Имя">
-    <button onclick="setName()">OK</button>
+    <input id="username" placeholder="Введите имя">
+    <button onclick="setName()" class="btn">OK</button>
     <p id="playerName"></p>
 </div>
 
+<!-- 🎮 ИГРА -->
 <div class="game">
+
+    <!-- 🪙 МОНЕТА -->
     <div id="coin" class="coin" onclick="clickCoin(event)">
         <div class="shine"></div>
     </div>
 
+    <!-- 💰 СЧЁТ -->
     <div class="score">
         <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" class="coinIcon">
         <span id="score">0</span>
     </div>
+
 </div>
 
+<!-- ⚡ АПГРЕЙД -->
 <div class="card">
     <button onclick="buyUpgrade()" class="btn">
-        ⚡ Улучшение 
+        ⚡ Улучшение
         <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" class="coinIconSmall">
         <span id="upgradeCost">10</span>
     </button>
 </div>
 
+<!-- ⏰ ИВЕНТ -->
 <div class="card">
-    <p id="eventText"></p>
+    <p id="eventText">Загрузка...</p>
 </div>
 
+<!-- 🔊 ЗВУК -->
+<audio id="clickSound" src="click.mp3" preload="auto"></audio>
+
+<!-- 🌍 Firebase (если используешь онлайн) -->
+<script src="firebase.js"></script>
+
+<!-- ⚙️ ОСНОВНОЙ СКРИПТ -->
 <script src="script.js"></script>
+
 </body>
 </html>
