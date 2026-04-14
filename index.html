@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minion Click </title>
+<title>Clicker Pro</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,10 +15,10 @@
     <a href="profile.html">👤</a>
 </nav>
 
-<h1 class="logo">💰 MinionClick</h1>
+<h1 class="logo">💰 CLICKER PRO</h1>
 
-<div class="profile card">
-    <input id="username" placeholder="Введите имя">
+<div class="card">
+    <input id="username" placeholder="Имя">
     <button onclick="setName()">OK</button>
     <p id="playerName"></p>
 </div>
@@ -28,19 +28,22 @@
         <div class="shine"></div>
     </div>
 
-    <div class="score" id="score">0</div>
+    <div class="score">
+        <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" class="coinIcon">
+        <span id="score">0</span>
+    </div>
 </div>
 
-<div class="panel">
-    <div class="card">
-        <button onclick="buyUpgrade()" class="btn">
-            ⚡ Сила клика (<span id="upgradeCost">10</span>)
-        </button>
-    </div>
+<div class="card">
+    <button onclick="buyUpgrade()" class="btn">
+        ⚡ Улучшение 
+        <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" class="coinIconSmall">
+        <span id="upgradeCost">10</span>
+    </button>
+</div>
 
-    <div class="card">
-        <p id="eventText">Загрузка...</p>
-    </div>
+<div class="card">
+    <p id="eventText"></p>
 </div>
 
 <script src="script.js"></script>
