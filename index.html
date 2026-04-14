@@ -2,38 +2,37 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Clicker Pro</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-    <a href="index.html">🏠 Игра</a>
-    <a href="tasks.html">🎯 Задания</a>
-    <a href="leaderboard.html">🏆 Топ</a>
+    <a href="index.html">🏠</a>
+    <a href="tasks.html">🎯</a>
+    <a href="leaderboard.html">🏆</a>
 </nav>
 
-<h1>🔥 Clicker Pro</h1>
+<h1>🔥 Clicker</h1>
 
 <div class="card">
     <input id="username" placeholder="Имя">
     <button onclick="setName()">OK</button>
-    <h3 id="playerName"></h3>
+    <p id="playerName"></p>
+</div>
+
+<div class="card main">
+    <h2 id="score">0</h2>
+    <button id="clickBtn" onclick="clickCoin(event)">💰</button>
 </div>
 
 <div class="card">
-    <h2>💰 <span id="score">0</span></h2>
-    <button id="clickBtn" onclick="clickCoin(event)">КЛИК</button>
-</div>
-
-<div class="card">
-    <h3>🛒 Улучшения</h3>
     <button onclick="buyUpgrade()">+1 (<span id="upgradeCost">10</span>)</button>
 </div>
 
 <div class="card">
-    <h3>⏰ Ивент</h3>
-    <p id="eventText">Загрузка...</p>
+    <p id="eventText"></p>
 </div>
 
 <script src="script.js"></script>
