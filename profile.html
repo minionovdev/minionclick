@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<nav>
+<nav class="nav">
     <a href="index.html">🏠</a>
     <a href="tasks.html">🎯</a>
     <a href="leaderboard.html">🏆</a>
@@ -19,25 +19,37 @@
 
 <div class="card">
     <p>Имя: <span id="name"></span></p>
-    <p>Очки: <span id="score"></span></p>
+    <p>
+        <img src="https://cdn-icons-png.flaticon.com/512/138/138292.png" class="coinIconSmall">
+        <span id="score"></span>
+    </p>
 </div>
 
 <div class="card">
-    <h3>🎨 Скины монеты</h3>
-    <button onclick="setSkin('gold')">🪙 Золото</button>
-    <button onclick="setSkin('blue')">🔵 Синий</button>
-    <button onclick="setSkin('red')">🔴 Красный</button>
-    <button onclick="setSkin('rainbow')">🌈 Радуга</button>
-</div>
-
-    <div class="card">
     <h3>🛒 Магазин</h3>
 
-    <button onclick="buySkin('blue', 100)">Синий (100)</button>
-    <button onclick="buySkin('red', 200)">Красный (200)</button>
-    <button onclick="buySkin('rainbow', 500)">Радуга (500)</button>
+    <div class="shopItem" onclick="buySkin('blue',100)">
+        🔵 Синий
+        <span><img class="coinIconSmall" src="https://cdn-icons-png.flaticon.com/512/138/138292.png">100</span>
+    </div>
+
+    <div class="shopItem" onclick="buySkin('red',200)">
+        🔴 Красный
+        <span><img class="coinIconSmall" src="https://cdn-icons-png.flaticon.com/512/138/138292.png">200</span>
+    </div>
+
+    <div class="shopItem" onclick="buySkin('rainbow',500)">
+        🌈 Радуга
+        <span><img class="coinIconSmall" src="https://cdn-icons-png.flaticon.com/512/138/138292.png">500</span>
+    </div>
 </div>
-    
+
+<div class="card">
+    <h3>🏆 Достижения</h3>
+    <div id="achievements"></div>
+</div>
+
+<script src="script.js"></script>
 <script src="profile.js"></script>
 </body>
 </html>
