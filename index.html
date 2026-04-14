@@ -8,34 +8,39 @@
 </head>
 <body>
 
-<nav>
+<nav class="nav">
     <a href="index.html">🏠</a>
     <a href="tasks.html">🎯</a>
     <a href="leaderboard.html">🏆</a>
     <a href="profile.html">👤</a>
 </nav>
 
-<h1 class="title">💰 Clicker Pro</h1>
+<h1 class="logo">💰 CLICKER PRO</h1>
 
-<div class="card">
-    <input id="username" placeholder="Имя">
+<div class="profile card">
+    <input id="username" placeholder="Введите имя">
     <button onclick="setName()">OK</button>
     <p id="playerName"></p>
 </div>
 
 <div class="game">
-    <div class="coin" id="coin" onclick="clickCoin(event)">💰</div>
-    <h2 id="score">0</h2>
+    <div id="coin" class="coin" onclick="clickCoin(event)">
+        <div class="shine"></div>
+    </div>
+
+    <div class="score" id="score">0</div>
 </div>
 
-<div class="card">
-    <button class="upgrade" onclick="buyUpgrade()">
-        ⚡ +1 за клик (<span id="upgradeCost">10</span>)
-    </button>
-</div>
+<div class="panel">
+    <div class="card">
+        <button onclick="buyUpgrade()" class="btn">
+            ⚡ Сила клика (<span id="upgradeCost">10</span>)
+        </button>
+    </div>
 
-<div class="card">
-    <p id="eventText"></p>
+    <div class="card">
+        <p id="eventText">Загрузка...</p>
+    </div>
 </div>
 
 <script src="script.js"></script>
