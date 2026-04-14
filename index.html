@@ -12,9 +12,10 @@
     <a href="index.html">🏠</a>
     <a href="tasks.html">🎯</a>
     <a href="leaderboard.html">🏆</a>
+    <a href="profile.html">👤</a>
 </nav>
 
-<h1>🔥 Clicker</h1>
+<h1 class="title">💰 Clicker Pro</h1>
 
 <div class="card">
     <input id="username" placeholder="Имя">
@@ -22,13 +23,15 @@
     <p id="playerName"></p>
 </div>
 
-<div class="card main">
+<div class="game">
+    <div class="coin" id="coin" onclick="clickCoin(event)">💰</div>
     <h2 id="score">0</h2>
-    <button id="clickBtn" onclick="clickCoin(event)">💰</button>
 </div>
 
 <div class="card">
-    <button onclick="buyUpgrade()">+1 (<span id="upgradeCost">10</span>)</button>
+    <button class="upgrade" onclick="buyUpgrade()">
+        ⚡ +1 за клик (<span id="upgradeCost">10</span>)
+    </button>
 </div>
 
 <div class="card">
